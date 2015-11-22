@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="box toolbar">
+    <ul class="box toolbar-list">
+      <li class="list-btn"><button class="fa fa-times btn cancel"></button></li>
+      <li class="list-btn"><button ng-click="doCrop()" class="fa fa-check btn check"></button></li>
+      <li class="list-btn"><button ng-click="showCrop()" class="fa fa-crop btn crop"></button></li>
+    </ul>
+    <button class="fa fa-folder-open open-btn" ng-click="openDialoge()">Open</button>
+    <!-- <div class="cropbutton">></div>
+    <div class="cropbutton"><</div>
+    <div class="cropbutton">original</div> -->
+  </div>
+  <div class="wrap-image">
+    <canvas id="canvas"></canvas>
+  </div>
+<input type="file" custom-on-change />
+<div>
+  image name: <input type="text" ng-model="data.imageName" placeholder="image name">
+</div>
+<div>
+  AutoComplate Cp:
+  <ishia-autocomplete
+  placeholder="type"
+  minlength="1"
+  url="{{autocompleteObject.url}}"
+  titlefield="title"
+  datafield=""
+  >
+</ishia-autocomplete>
+</div>
+<div>
+  comment: <input type="text" ng-model="data.comment" placeholder="comment">
+</div>
+<button type="button" class="fa fa-check" ng-click="sendData()">Send Data</button>
+</div>
